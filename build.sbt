@@ -4,7 +4,10 @@ version := "0.1"
 
 scalaVersion := "2.13.5"
 
-idePackagePrefix := Some("org.rezonation.akka")
+idePackagePrefix := Some("rezonation.akka")
 val AkkaVersion = "2.6.14"
-libraryDependencies +=
-  ("com.typesafe.akka" %% "akka-actor" % AkkaVersion)
+
+libraryDependencies ++= Seq(
+  "com.typesafe.akka" %% "akka-actor" % AkkaVersion,
+  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.3"
+)
